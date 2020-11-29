@@ -105,15 +105,3 @@ class Database():
     def addOrder(self,data):
         self.Order.insert_one(data)
         return("Execute Order 66")
-        
-#for f in findit:
-#	print(f["username"])
-
-#findjuan=db.find_one({"id": 2})
-
-#print(findjuan)
-
-#db.update_one({"id":3}, {"$set":{"username": "John the IV", "spesialisasi": "Poggers"}})
-
-# db.delete_one({"id": 1})
-# db.delete_many({})

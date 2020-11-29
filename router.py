@@ -6,12 +6,6 @@ from database import Database
 
 router = APIRouter()
 
-@router.post("/testing/p")
-def p(tes: TesInput):
-	return{"random": tes.random,
-            "apa": tes.apa
-        }
-
 @router.post("/tukang/add")
 def addTk(tk: Tukang):
     return{Database().addTukang(tk.dict())}

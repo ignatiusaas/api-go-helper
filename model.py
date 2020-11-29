@@ -1,10 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class TesInput(BaseModel):
-    random: str
-    apa: Optional[str] = "Def"
-
 class Tukang(BaseModel):
     username: str
     specialization: str
