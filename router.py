@@ -1,6 +1,5 @@
 from fastapi import HTTPException, Depends, Request
 from fastapi import APIRouter
-from model import TesInput
 from model import *
 from database import Database
 
