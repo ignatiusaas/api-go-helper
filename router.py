@@ -80,3 +80,7 @@ def findRv(rv: ReviewSUsername):
 @router.post("/order/add")
 def addOr(orda: Order):
     return{Database().addOrder(orda.dict())}
+
+@router.post("/order/find")
+def findOr(orda: OrderSUsername):
+    return{Database().findOrder(orda.dict())}

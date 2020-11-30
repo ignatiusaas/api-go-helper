@@ -105,3 +105,16 @@ class Database():
     def addOrder(self,data):
         self.Order.insert_one(data)
         return("Execute Order 66")
+
+    def findOrder(self,data):
+        orderlist = self.Order.find(data)
+        listkosong = []
+        for c in reviewlist:
+            calon = {}
+            keys = c.keys()
+            for k in keys:
+                if(k != '_id' and k != 'usernameTk'):
+                    calon[k] = c[k]
+            listkosong.append(calon)
+        print(listkosong)
+        return(listkosong)

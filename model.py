@@ -42,3 +42,6 @@ class Order(BaseModel):
     usernameUs: str
     usernameTk: str
     location: str
+
+class OrderSUsername(BaseModel):
+    usernameTk: str
