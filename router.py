@@ -73,7 +73,7 @@ def clearUs():
 def addRv(rv: Review):
     return{Database().addReview(rv.dict())}
 
-@router.get("/review/find")
+@router.get("/review/find/{username}")
 def findRv(rv: ReviewSUsername):
     return{"reviews": Database().findReview(rv.dict())}
 
