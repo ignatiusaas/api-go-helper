@@ -60,10 +60,10 @@ def findUs(us: TukangSLocation):
 
 @router.post("/user/delete/username")
 def delUs(us: TukangSUsername):
-    return{"result": Database().delUser(us.dict())}
+    return{Database().delUser(us.dict())}
 @router.post("/user/delete/location")
 def delUs(us: TukangSLocation):
-    return{"result": Database().delUser(us.dict())}
+    return{Database().delUser(us.dict())}
 
 @router.post("/user/clear")
 def clearUs():
