@@ -13,29 +13,29 @@ def addTk(tk: Tukang):
 def listTk():
     return{"list": Database().listTukang()}
 
-@router.get("/tukang/find/username")
+@router.post("/tukang/find/username")
 def findTk(tk: TukangSUsername):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/find/specialization")
+@router.post("/tukang/find/specialization")
 def findTk(tk: TukangSSpecialization):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/find/location")
+@router.post("/tukang/find/location")
 def findTk(tk: TukangSLocation):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/find/review")
+@router.post("/tukang/find/review")
 def findTk(tk: TukangSReview):
     return{"result": Database().findTukang(tk.dict())}
 
-@router.get("/tukang/delete/username")
+@router.post("/tukang/delete/username")
 def delTk(tk: TukangSUsername):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/delete/specialization")
+@router.post("/tukang/delete/specialization")
 def delTk(tk: TukangSSpecialization):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/delete/location")
+@router.post("/tukang/delete/location")
 def delTk(tk: TukangSLocation):
     return{"result": Database().findTukang(tk.dict())}
-@router.get("/tukang/delete/review")
+@router.post("/tukang/delete/review")
 def delTk(tk: TukangSReview):
     return{"result": Database().findTukang(tk.dict())}
 
@@ -51,17 +51,17 @@ def addUs(us: User):
 def listUs():
     return{"list": Database().listUser()}
 
-@router.get("/user/find/username")
+@router.post("/user/find/username")
 def findUs(us: TukangSUsername):
     return{"result": Database().findUser(us.dict())}
-@router.get("/user/find/location")
+@router.post("/user/find/location")
 def findUs(us: TukangSLocation):
     return{"result": Database().findUser(us.dict())}
 
-@router.get("/user/delete/username")
+@router.post("/user/delete/username")
 def delUs(us: TukangSUsername):
     return{"result": Database().delUser(us.dict())}
-@router.get("/user/delete/location")
+@router.post("/user/delete/location")
 def delUs(us: TukangSLocation):
     return{"result": Database().delUser(us.dict())}
 
