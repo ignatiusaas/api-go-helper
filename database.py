@@ -13,7 +13,7 @@ class Database():
     
     def addTukang(self,data):
         self.Tukang.insert_one(data)
-        return("Succ")
+        return("Tukang added")
 
     def listTukang(self):
         tukanglist = self.Tukang.find()
@@ -42,15 +42,15 @@ class Database():
 
     def delTukang(self,data):
         self.Tukang.delete_one(data)
-        return("Brrrrap")
+        return("Tukang deleted")
     
     def clearTukang(self):
         self.Tukang.delete_many({})
-        return("Bites the dust")
+        return("Tukang cleared")
 
     def addUser(self,data):
         self.User.insert_one(data)
-        return("Succ")
+        return("User added")
 
     def listUser(self):
         userlist = self.User.find()
@@ -79,15 +79,15 @@ class Database():
         
     def delUser(self,data):
         self.User.delete_one(data)
-        return("Brrrrap")
+        return("User deleted")
     
     def clearUser(self):
         self.User.delete_many({})
-        return("Bites the dust")
+        return("User cleared")
     
     def addReview(self,data):
         self.Review.insert_one(data)
-        return("Pogchamp")
+        return("Review added")
         
     def findReview(self,data):
         reviewlist = self.Review.find(data)
@@ -104,7 +104,7 @@ class Database():
 
     def addOrder(self,data):
         self.Order.insert_one(data)
-        return("Execute Order 66")
+        return("Order added")
 
     def findOrder(self,data):
         orderlist = self.Order.find(data)
