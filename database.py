@@ -109,7 +109,7 @@ class Database():
     def findOrder(self,data):
         orderlist = self.Order.find(data)
         listkosong = []
-        for c in reviewlist:
+        for c in orderlist:
             calon = {}
             keys = c.keys()
             for k in keys:
