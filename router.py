@@ -28,16 +28,16 @@ def findTk(tk: TukangSReview):
 
 @router.post("/tukang/delete/username")
 def delTk(tk: TukangSUsername):
-    return{"result": Database().findTukang(tk.dict())}
+    return{Database().delTukang(tk.dict())}
 @router.post("/tukang/delete/specialization")
 def delTk(tk: TukangSSpecialization):
-    return{"result": Database().findTukang(tk.dict())}
+    return{Database().delTukang(tk.dict())}
 @router.post("/tukang/delete/location")
 def delTk(tk: TukangSLocation):
-    return{"result": Database().findTukang(tk.dict())}
+    return{Database().delTukang(tk.dict())}
 @router.post("/tukang/delete/review")
 def delTk(tk: TukangSReview):
-    return{"result": Database().findTukang(tk.dict())}
+    return{Database().delTukang(tk.dict())}
 
 @router.post("/tukang/clear")
 def clearTk():
