@@ -39,6 +39,10 @@ def delTk(tk: TukangSLocation):
 def delTk(tk: TukangSReview):
     return{Database().delTukang(tk.dict())}
 
+@router.post("/tukang/update")
+def updateTk(up: UpdateTukang):
+    return{Database().updateTk(up.username,up.dict())}
+
 @router.post("/tukang/clear")
 def clearTk():
     return{Database().clearTukang()}
@@ -65,6 +69,10 @@ def delUs(us: TukangSUsername):
 def delUs(us: TukangSLocation):
     return{Database().delUser(us.dict())}
 
+@router.post("/user/update")
+def updateUs(up: UpdateUser):
+    return{Database().updateUs(up.username,up.dict())}
+
 @router.post("/user/clear")
 def clearUs():
     return{Database().clearUser()}
@@ -77,6 +85,10 @@ def addRv(rv: Review):
 def findRv(rv: ReviewSUsername):
     return{"reviews": Database().findReview(rv.dict())}
 
+@router.post("/review/update")
+def updateRv(up: UpdateReview):
+    return{Database().updateTk(up.usernameTk,up.usernameUs,up.dict())}
+
 @router.post("/order/add")
 def addOr(orda: Order):
     return{Database().addOrder(orda.dict())}
@@ -84,3 +96,7 @@ def addOr(orda: Order):
 @router.post("/order/find")
 def findOr(orda: OrderSUsername):
     return{"orders": Database().findOrder(orda.dict())}
+
+@router.post("/order/update")
+def updateOr(up: UpdateOrder):
+    return{Database().updatOrk(up.usernameTk,up.usernameUs,up.dict())}

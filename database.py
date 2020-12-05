@@ -40,6 +40,14 @@ class Database():
         print(listkosong)
         return(listkosong)
 
+    def updateTukang(self,username,data):
+        update_data = {}
+        for key in data.keys():
+            if data[key] != None:
+                update_data[key] = data [key]
+        self.Tukang.update_one({"username": username}, {"$set": update_data})
+        return("Tukang updated")
+
     def delTukang(self,data):
         self.Tukang.delete_one(data)
         return("Tukang deleted")
@@ -76,6 +84,14 @@ class Database():
         listkosong.append(calon)
         print(listkosong)
         return(listkosong)
+
+    def updateUser(self,username,data):
+        update_data = {}
+        for key in data.keys():
+            if data[key] != None:
+                update_data[key] = data [key]
+        self.User.update_one({"username": username}, {"$set": update_data})
+        return("User updated")
         
     def delUser(self,data):
         self.User.delete_one(data)
@@ -102,6 +118,14 @@ class Database():
         print(listkosong)
         return(listkosong)
 
+    def updateReview(self,ustk,usus,data):
+        update_data = {}
+        for key in data.keys():
+            if data[key] != None:
+                update_data[key] = data [key]
+        self.Review.update_one({"usernameTk": ustk, "usernameUs": usus}, {"$set": update_data})
+        return("Review updated")
+
     def addOrder(self,data):
         self.Order.insert_one(data)
         return("Order added")
@@ -118,3 +142,11 @@ class Database():
             listkosong.append(calon)
         print(listkosong)
         return(listkosong)
+
+    def updateOrder(self,username,data):
+        update_data = {}
+        for key in data.keys():
+            if data[key] != None:
+                update_data[key] = data [key]
+        self.Order.update_one({"usernameTk": ustk, "usernameUs": usus}, {"$set": update_data})
+        return("Order updated")
